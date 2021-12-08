@@ -17,7 +17,8 @@ OBJS_M		= ${SRCS_MANDATORY:.c=.o}
 
 LIBFT 		= libft
 
-SLG_UTL		=
+SLG_UTL		= ./src/clear.c \
+			  ./src/debug.c
 
 OBJS_SLG	= ${SLG_UTL:.c=.o}
 

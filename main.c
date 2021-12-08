@@ -10,10 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "./push_swap.h"
 
 int main(void)
 {
-    printf("Hello Word!\n");
-    return (0);
+	t_stack a;
+	t_stack b;
+	int	i;
+
+	a.array = malloc(sizeof(int) * 10);
+	b.array = malloc(sizeof(int) * 10);
+	a.size = 10;
+	b.size = 0;
+	i = 0;
+
+	while(i < 10)
+	{
+		a.array[i] = i;
+		b.array[i] = 0;
+		i++;
+	}
+	print_stacks(&a, &b);
+
+	clear(&a, &b);
+
+	return (0);
 }
