@@ -16,7 +16,7 @@ int main(void)
 {
 	t_stack a;
 	t_stack b;
-	int	i;
+	int i;
 
 	a.array = malloc(sizeof(int) * 10);
 	b.array = malloc(sizeof(int) * 10);
@@ -24,9 +24,9 @@ int main(void)
 	b.size = 0;
 	i = 0;
 
-	while(i < 10)
+	while (i < 10)
 	{
-		a.array[i] = i;
+		a.array[i] = i + i;
 		b.array[i] = 0;
 		i++;
 	}
