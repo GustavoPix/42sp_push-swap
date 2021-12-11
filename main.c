@@ -14,25 +14,29 @@
 
 int main(void)
 {
-	t_stack a;
-	t_stack b;
+	t_stacks s;
 	int i;
 
-	a.array = malloc(sizeof(int) * 10);
-	b.array = malloc(sizeof(int) * 10);
-	a.size = 10;
-	b.size = 0;
+	s.a.array = malloc(sizeof(int) * 10);
+	s.b.array = malloc(sizeof(int) * 10);
+	s.a.size = 10;
+	s.b.size = 0;
 	i = 0;
 
 	while (i < 10)
 	{
-		a.array[i] = i + i;
-		b.array[i] = 0;
+		s.a.array[i] = i + 1;
+		s.b.array[i] = 0;
 		i++;
 	}
-	print_stacks(&a, &b);
+	print_stacks(&s);
+	push_b(&s);
+	swap_a(&s);
+	swap_b(&s);
+	push_a(&s);
+	print_stacks(&s);
 
-	clear(&a, &b);
+	clear(&s);
 
 	return (0);
 }

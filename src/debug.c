@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 20:21:48 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/08 20:47:10 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/11 11:40:00 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/11 12:12:23 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,19 @@ void print_value(int a)
 		ft_putchar_fd('-', 1);
 }
 
-void print_stacks(t_stack *a, t_stack *b)
+void print_stacks(t_stacks *s)
 {
 	size_t i;
 
 	i = 0;
 	ft_putstr_fd("a    b\n", 1);
 	ft_putstr_fd("=    =\n", 1);
-	while (i < a->size)
+	while (i < s->a.size)
 	{
 
-		print_value(a->array[i]);
+		print_value(s->a.array[i]);
 		ft_putstr_fd("    ", 1);
-		print_value(b->array[i]);
+		print_value(s->b.array[i]);
 		ft_putchar_fd('\n', 1);
 		i++;
 	}

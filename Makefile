@@ -18,7 +18,11 @@ OBJS_M		= ${SRCS_MANDATORY:.c=.o}
 LIBFT 		= libft
 
 SLG_UTL		= ./src/clear.c \
-			  ./src/debug.c
+			  ./src/debug.c \
+			  ./src/moves.c \
+			  ./src/moves_a.c \
+			  ./src/moves_b.c \
+			  ./src/moves_s.c
 
 OBJS_SLG	= ${SLG_UTL:.c=.o}
 
@@ -50,9 +54,9 @@ fclean: 	clean
 re: 		fclean all
 
 test:		all
-			./so_long ./maps/pdf2.ber
+			./pushswap
 
-val:		all
-			valgrind --leak-check=full ./so_long ./maps/test_leak.ber
+val:		all clean
+			valgrind -q --leak-check=full ./pushswap
 
 .PHONY:		all gclone clean fclean re test val

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clear.c                                            :+:      :+:    :+:   */
+/*   moves_b.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 19:50:15 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/11 12:11:58 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/11 12:19:42 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/11 13:35:24 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void clear_stack(t_stack *s)
+void swap_b(t_stacks *s)
 {
-	if (s->array)
-		free(s->array);
+	ft_putstr_fd("sb\n", 1);
+	swap(&s->b);
 }
 
-void clear(t_stacks *s)
+void push_b(t_stacks *s)
 {
-	clear_stack(&s->a);
-	clear_stack(&s->b);
+	ft_putstr_fd("pb\n", 1);
+	push(&s->a, &s->b);
 }

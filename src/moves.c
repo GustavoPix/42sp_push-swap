@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clear.c                                            :+:      :+:    :+:   */
+/*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 19:50:15 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/11 12:11:58 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/11 12:02:40 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/11 13:32:24 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void clear_stack(t_stack *s)
+void swap(t_stack *s)
 {
-	if (s->array)
-		free(s->array);
+	int x;
+
+	if (s->size >= 2)
+	{
+		x = s->array[0];
+		s->array[0] = s->array[1];
+		s->array[1] = x;
+	}
 }
 
-void clear(t_stacks *s)
+void push(t_stack *ori, t_stack *dest)
 {
-	clear_stack(&s->a);
-	clear_stack(&s->b);
+	if (ori->size >= 1)
+	{
+		ft_memmove(&dest->array[1], &dest->array[0], sizeof(int) * dest->size);
+		dest->array[0] = ori->array[0];
+		ft_memmove(&ori->array[0], &ori->array[1], sizeof(int) * (ori->size - 1));
+		ori->array[ori->size - 1] = 0;
+		ori->size--;
+		dest->size++;
+	}
 }
