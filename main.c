@@ -31,9 +31,28 @@ int main(void)
 	}
 	print_stacks(&s);
 	push_b(&s);
+	print_stacks(&s);
+	push_b(&s);
+	print_stacks(&s);
+	push_b(&s);
+	print_stacks(&s);
 	swap_a(&s);
+	print_stacks(&s);
 	swap_b(&s);
+	print_stacks(&s);
+	rotate_a(&s);
+	print_stacks(&s);
+	rotate_b(&s);
+	print_stacks(&s);
 	push_a(&s);
+	print_stacks(&s);
+	rev_rotate_a(&s);
+	print_stacks(&s);
+	rotate_r(&s);
+	print_stacks(&s);
+	rev_rotate_b(&s);
+	print_stacks(&s);
+	rev_rotate_r(&s);
 	print_stacks(&s);
 
 	clear(&s);
