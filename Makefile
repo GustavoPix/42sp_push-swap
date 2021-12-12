@@ -32,7 +32,7 @@ PATH_MLX	= mlx
 CC 			= clang
 CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
-NAME		= pushswap
+NAME		= push_swap
 
 all: 		${NAME}
 

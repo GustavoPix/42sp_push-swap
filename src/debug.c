@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 11:40:00 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/11 12:12:23 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/12 11:28:21 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void print_stacks(t_stacks *s)
 	i = 0;
 	ft_putstr_fd("a    b\n", 1);
 	ft_putstr_fd("=    =\n", 1);
-	while (i < s->a.size)
+	while (i < s->a.size || i < s->b.size)
 	{
 
 		print_value(s->a.array[i]);
