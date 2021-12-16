@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves_b.c                                          :+:      :+:    :+:   */
+/*   bubble.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 12:19:42 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/11 14:31:08 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/13 19:52:24 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/15 21:46:49 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void swap_b(t_stacks *s)
+void bubble(t_stacks *s)
 {
-	ft_putstr_fd("sb\n", 1);
-	swap(&s->b);
-}
-
-void push_b(t_stacks *s)
-{
-	ft_putstr_fd("pb\n", 1);
-	push(&s->a, &s->b);
-}
-
-void rotate_b(t_stacks *s)
-{
-	ft_putstr_fd("rb\n", 1);
-	rotate(&s->b);
-}
-
-void rev_rotate_b(t_stacks *s)
-{
-	ft_putstr_fd("rrb\n", 1);
-	rev_rotate(&s->b);
+	while (!inOrder(&s->a) || s->a.size)
+	{
+		if (s->b.size > 1)
+		{
+			while (s->b.array[0] > s->a.array[0])
+			{
+				push_a(s);
+				rotate_a(s);
+			}
+		}
+		push_b(s);
+	}
+	while (s->b.size)
+		push_a(s);
 }

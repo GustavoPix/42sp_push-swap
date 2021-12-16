@@ -101,31 +101,23 @@ int main(int argc, char **argv)
 	s.b.size = 0;
 	i = 0;
 
-	while (i < argc - 1)
+	if (is_valid_numbers(argv, argc))
 	{
-		s.a.array[i] = (int)ft_atoi(argv[i + 1]);
-		s.b.array[i] = 0;
-		i++;
+		while (i < argc - 1)
+		{
+			s.a.array[i] = ft_atoi(argv[i + 1]);
+			s.b.array[i] = 0;
+			i++;
+		}
+		if (argc < 50)
+			custom_order(&s);
+		else if (argc < 100)
+			insert(&s);
+		else if (argc < 150)
+			radix_sort2(&s, argc - 1);
+		else
+			radix_sort(&s, argc - 1);
 	}
-	i = 0;
-	// while (i < argc - 1)
-	//{
-	//	printf("%d -> %x -> %d\n", s.a.array[i], (s.a.array[i]), (s.a.array[i] >> 0) & 1);
-	//	i++;
-	// }
-	// print_stacks(&s);
-	if (argc < 50)
-		custom_order(&s);
-	else if (argc < 100)
-		insert(&s);
-	else if (argc < 150)
-		radix_sort2(&s, argc - 1);
-	else
-		radix_sort(&s, argc - 1);
-	// custom_order(&s);
-	// bubble(&s);
-	// print_stacks(&s);
-
 	clear(&s);
 
 	return (0);

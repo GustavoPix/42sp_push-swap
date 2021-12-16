@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:48:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 21:09:12 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:47:01 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void normalize(t_stack *s)
 {

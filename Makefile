@@ -19,14 +19,15 @@ LIBFT 		= libft
 
 SLG_UTL		= ./src/clear.c \
 			  ./src/debug.c \
-			  ./src/moves.c \
-			  ./src/moves_a.c \
-			  ./src/moves_b.c \
-			  ./src/moves_s.c \
-			  ./src/radix.c \
-			  ./src/custom.c \
-			  ./src/bubble.c \
-			  ./src/insert.c
+			  ./src/moves/moves.c \
+			  ./src/moves/moves_a.c \
+			  ./src/moves/moves_b.c \
+			  ./src/moves/moves_s.c \
+			  ./src/sort/radix.c \
+			  ./src/sort/custom.c \
+			  ./src/sort/bubble.c \
+			  ./src/sort/insert.c \
+			  ./src/checker/valid_number.c
 
 OBJS_SLG	= ${SLG_UTL:.c=.o}
 

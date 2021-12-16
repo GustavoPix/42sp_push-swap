@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 12:25:21 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/11 14:29:49 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:46:28 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void swap_s(t_stacks *s)
 {

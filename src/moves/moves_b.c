@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves_a.c                                          :+:      :+:    :+:   */
+/*   moves_b.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/11 12:06:58 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/11 14:29:06 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/11 12:19:42 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/15 21:46:23 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void swap_a(t_stacks *s)
+void swap_b(t_stacks *s)
 {
-	ft_putstr_fd("sa\n", 1);
-	swap(&s->a);
+	ft_putstr_fd("sb\n", 1);
+	swap(&s->b);
 }
 
-void push_a(t_stacks *s)
+void push_b(t_stacks *s)
 {
-	ft_putstr_fd("pa\n", 1);
-	push(&s->b, &s->a);
+	ft_putstr_fd("pb\n", 1);
+	push(&s->a, &s->b);
 }
 
-void rotate_a(t_stacks *s)
+void rotate_b(t_stacks *s)
 {
-	ft_putstr_fd("ra\n", 1);
-	rotate(&s->a);
+	ft_putstr_fd("rb\n", 1);
+	rotate(&s->b);
 }
 
-void rev_rotate_a(t_stacks *s)
+void rev_rotate_b(t_stacks *s)
 {
-	ft_putstr_fd("rra\n", 1);
-	rev_rotate(&s->a);
+	ft_putstr_fd("rrb\n", 1);
+	rev_rotate(&s->b);
 }

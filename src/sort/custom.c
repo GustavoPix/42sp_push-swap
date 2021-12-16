@@ -6,11 +6,11 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:49:47 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 21:37:53 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:46:53 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void custom_order(t_stacks *s)
 {

@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bubble.c                                           :+:      :+:    :+:   */
+/*   valid_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 19:52:24 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 13:29:15 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/15 21:51:16 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/15 22:19:40 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void bubble(t_stacks *s)
+int is_valid_number(char *str)
 {
-	while (!inOrder(&s->a) || s->a.size)
+	int i;
+
+	i = 0;
+	while (str[i])
 	{
-		if (s->b.size > 1)
+		if (str[i] < '0' || str[i] > '9')
 		{
-			while (s->b.array[0] > s->a.array[0])
-			{
-				push_a(s);
-				rotate_a(s);
-			}
+			if (i > 0 && str[i] > '-')
+				return (0);
 		}
-		push_b(s);
+		i++;
 	}
-	while (s->b.size)
-		push_a(s);
+	return (1);
+}
+
+int is_valid_numbers(char **strs, int size)
+{
+	int i;
+
+	i = 1;
+	while (i < size)
+	{
+		if (!is_valid_number(strs[i]))
+		{
+			ft_putstr_fd("Error\n", 1);
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 20:01:42 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 22:14:00 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,10 @@ void insert(t_stacks *s);
 /*  bubble     */
 /*=============*/
 void bubble(t_stacks *s);
+
+/*=============*/
+/*  checker    */
+/*=============*/
+int is_valid_numbers(char **strs, int size);
 
 // endif
