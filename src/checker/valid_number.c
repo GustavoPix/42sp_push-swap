@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:51:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 19:09:44 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 20:57:28 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ int duplicate_number(t_stack *s)
 	return (0);
 }
 
-int min_valid_value(t_stack *s, char **str)
+int overflow_int(t_stack *s, char **str)
 {
 	size_t i;
 
