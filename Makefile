@@ -22,7 +22,11 @@ SLG_UTL		= ./src/clear.c \
 			  ./src/moves.c \
 			  ./src/moves_a.c \
 			  ./src/moves_b.c \
-			  ./src/moves_s.c
+			  ./src/moves_s.c \
+			  ./src/radix.c \
+			  ./src/custom.c \
+			  ./src/bubble.c \
+			  ./src/insert.c
 
 OBJS_SLG	= ${SLG_UTL:.c=.o}
 

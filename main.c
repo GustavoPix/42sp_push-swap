@@ -12,6 +12,52 @@
 
 #include "./push_swap.h"
 
+int outOrder(t_stack *s)
+{
+	int qty;
+	size_t i;
+
+	i = 1;
+	qty = 0;
+	while (i < s->size)
+	{
+		if (s->array[i] < s->array[i - 1])
+			qty++;
+		i++;
+	}
+	return (qty);
+}
+
+int rev_outOrder(t_stack *s)
+{
+	int qty;
+	size_t i;
+
+	i = 1;
+	qty = 0;
+	while (i < s->size)
+	{
+		if (s->array[i] > s->array[i - 1])
+			qty++;
+		i++;
+	}
+	return (qty);
+}
+
+int rev_inOrder(t_stack *s)
+{
+	size_t i;
+
+	i = 1;
+	while (i < s->size)
+	{
+		if (s->array[i] > s->array[i - 1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 int inOrder(t_stack *s)
 {
 	size_t i;
@@ -24,29 +70,6 @@ int inOrder(t_stack *s)
 		i++;
 	}
 	return (1);
-}
-
-void big_push_swap(t_stacks *s, int size)
-{
-	int i;
-	int ib;
-
-	ib = 0;
-	while ((!inOrder(&s->a) || s->b.size))
-	{
-		i = 0;
-		while (i < size)
-		{
-			if (((s->a.array[0] >> ib) & 1))
-				rotate_a(s);
-			else
-				push_b(s);
-			i++;
-		}
-		while (s->b.size)
-			push_a(s);
-		ib++;
-	}
 }
 
 int convert_binarie(int num)
@@ -65,54 +88,6 @@ int convert_binarie(int num)
 		num /= 2;
 	}
 	return (aux);
-}
-
-void push_swap(t_stacks *s)
-{
-	int m;
-
-	m = 0;
-	while ((!inOrder(&s->a) || s->b.size))
-	{
-		if (s->a.array[1] < s->a.array[0])
-			swap_a(s);
-		else if (s->a.array[0] > s->a.array[s->a.size - 1])
-			rotate_a(s);
-		else if (!inOrder(&s->a))
-			push_b(s);
-		if (s->b.size > 1)
-		{
-			if (s->b.array[0] < s->b.array[s->b.size - 1])
-				rotate_b(s);
-			else if (s->b.array[0] < s->b.array[1])
-				swap_b(s);
-		}
-		if (inOrder(&s->a) && s->b.size)
-			push_a(s);
-		m++;
-	}
-}
-
-void normalize(t_stack *s)
-{
-	size_t i;
-	int minnor;
-
-	i = 0;
-	minnor = 0;
-	while (i < s->size)
-	{
-		if (s->array[i] < minnor)
-			minnor = s->array[i];
-		i++;
-	}
-	i = 0;
-	minnor *= -1;
-	while (i < s->size)
-	{
-		s->array[i] += minnor;
-		i++;
-	}
 }
 
 int main(int argc, char **argv)
@@ -139,9 +114,9 @@ int main(int argc, char **argv)
 	//	i++;
 	// }
 	// print_stacks(&s);
-	normalize(&s.a);
-	big_push_swap(&s, argc - 1);
-
+	// custom_order(&s);
+	radix_sort2(&s, argc - 1);
+	// bubble(&s);
 	// print_stacks(&s);
 
 	clear(&s);

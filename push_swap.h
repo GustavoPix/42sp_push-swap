@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/12 16:47:52 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 20:01:42 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,14 @@ typedef struct s_stacks
 	t_stack a;
 	t_stack b;
 } t_stacks;
+
+/*=============*/
+/*  main       */
+/*=============*/
+int inOrder(t_stack *s);
+int rev_inOrder(t_stack *s);
+int outOrder(t_stack *s);
+int rev_outOrder(t_stack *s);
 
 /*=============*/
 /*  debug      */
@@ -68,5 +76,26 @@ void rev_rotate_b(t_stacks *s);
 void swap_s(t_stacks *s);
 void rotate_r(t_stacks *s);
 void rev_rotate_r(t_stacks *s);
+
+/*=============*/
+/*  radix      */
+/*=============*/
+void radix_sort(t_stacks *s, int size);
+int radix_sort2(t_stacks *s, int size);
+
+/*=============*/
+/*  custom     */
+/*=============*/
+void custom_order(t_stacks *s);
+
+/*=============*/
+/*  insert     */
+/*=============*/
+void insert(t_stacks *s);
+
+/*=============*/
+/*  bubble     */
+/*=============*/
+void bubble(t_stacks *s);
 
 // endif
