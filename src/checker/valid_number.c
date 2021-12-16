@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:51:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 23:05:49 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 19:09:44 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,28 +63,14 @@ int duplicate_number(t_stack *s)
 	return (0);
 }
 
-int min_valid_value(t_stack *s)
+int min_valid_value(t_stack *s, char **str)
 {
 	size_t i;
 
 	i = 0;
 	while (i < s->size)
 	{
-		if (MIN < s->array[i] - MIN)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int max_valid_value(t_stack *s)
-{
-	size_t i;
-
-	i = 0;
-	while (i < s->size)
-	{
-		if (MAX > MAX - s->array[i])
+		if (ft_strncmp(str[i + 1], ft_itoa(s->array[i]), ft_strlen(str[i + 1])))
 			return (0);
 		i++;
 	}

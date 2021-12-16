@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 22:56:18 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 19:05:40 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,8 +108,7 @@ void bubble(t_stacks *s);
 /*=============*/
 int is_valid_numbers(char **strs, int size);
 int duplicate_number(t_stack *s);
-int min_valid_value(t_stack *s);
-int max_valid_value(t_stack *s);
+int min_valid_value(t_stack *s, char **str);
 
 /*=============*/
 /*  checker    */
