@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 12:40:55 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 21:46:57 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 20:42:53 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ void insert(t_stacks *s)
 	}
 	if (ia > s->a.size / 2)
 	{
-		while (!inOrder(&s->a))
+		while (!in_order(&s->a))
 			rotate_a(s);
 	}
 	else
 	{
-		while (!inOrder(&s->a))
+		while (!in_order(&s->a))
 			rev_rotate_a(s);
 	}
 }

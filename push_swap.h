@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 19:05:40 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 20:50:00 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 
 # include <stdio.h>
 # include "./libft/libft.h"
-
-# ifndef BUFFER_SIZE
-#  define MIN -2147483648
-#  define MAX 2147483647
-# endif
 
 typedef struct s_stack
 {
@@ -34,12 +29,9 @@ typedef struct s_stacks
 } t_stacks;
 
 /*=============*/
-/*  main       */
+/*  order      */
 /*=============*/
-int inOrder(t_stack *s);
-int rev_inOrder(t_stack *s);
-int outOrder(t_stack *s);
-int rev_outOrder(t_stack *s);
+int in_order(t_stack *s);
 
 /*=============*/
 /*  debug      */

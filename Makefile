@@ -19,6 +19,7 @@ LIBFT 		= libft
 
 SLG_UTL		= ./src/clear.c \
 			  ./src/debug.c \
+			  ./src/order.c \
 			  ./src/moves/moves.c \
 			  ./src/moves/moves_a.c \
 			  ./src/moves/moves_b.c \

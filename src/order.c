@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   bubble.c                                           :+:      :+:    :+:   */
+/*   order.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/13 19:52:24 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 20:42:26 by glima-de         ###   ########.fr       */
+/*   Created: 2021/12/16 20:49:29 by glima-de          #+#    #+#             */
+/*   Updated: 2021/12/16 20:50:07 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-void bubble(t_stacks *s)
+int	in_order(t_stack *s)
 {
-	while (!in_order(&s->a) || s->a.size)
+	size_t	i;
+
+	i = 1;
+	while (i < s->size)
 	{
-		if (s->b.size > 1)
-		{
-			while (s->b.array[0] > s->a.array[0])
-			{
-				push_a(s);
-				rotate_a(s);
-			}
-		}
-		push_b(s);
+		if (s->array[i] < s->array[i - 1])
+			return (0);
+		i++;
 	}
-	while (s->b.size)
-		push_a(s);
+	return (1);
 }

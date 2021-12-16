@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:48:35 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 21:47:01 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 20:41:39 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void radix_sort(t_stacks *s, int size)
 
 	ib = 0;
 	normalize(&s->a);
-	while (!inOrder(&s->a) || s->b.size)
+	while (!in_order(&s->a) || s->b.size)
 	{
 		i = 0;
 		while (i < size)
@@ -107,7 +107,7 @@ int radix_sort2(t_stacks *s, int size)
 			rotate_a(s);
 	}
 
-	while ((!inOrder(&s->a) || s->b.size - negative > 0))
+	while ((!in_order(&s->a) || s->b.size - negative > 0))
 	{
 		i = 0;
 		while (i < size - negative)

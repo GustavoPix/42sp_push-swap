@@ -12,114 +12,39 @@
 
 #include "./push_swap.h"
 
-int outOrder(t_stack *s)
+static void	push_swap(int argc, char **argv, t_stacks *s)
 {
-	int qty;
-	size_t i;
+	int	i;
 
-	i = 1;
-	qty = 0;
-	while (i < s->size)
-	{
-		if (s->array[i] < s->array[i - 1])
-			qty++;
-		i++;
-	}
-	return (qty);
-}
-
-int rev_outOrder(t_stack *s)
-{
-	int qty;
-	size_t i;
-
-	i = 1;
-	qty = 0;
-	while (i < s->size)
-	{
-		if (s->array[i] > s->array[i - 1])
-			qty++;
-		i++;
-	}
-	return (qty);
-}
-
-int rev_inOrder(t_stack *s)
-{
-	size_t i;
-
-	i = 1;
-	while (i < s->size)
-	{
-		if (s->array[i] > s->array[i - 1])
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int inOrder(t_stack *s)
-{
-	size_t i;
-
-	i = 1;
-	while (i < s->size)
-	{
-		if (s->array[i] < s->array[i - 1])
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-int convert_binarie(int num)
-{
-	size_t i;
-	int d;
-	int aux;
-
+	s->a.array = malloc(sizeof(int) * argc - 1);
+	s->b.array = malloc(sizeof(int) * argc - 1);
+	s->a.size = argc - 1;
+	s->b.size = 0;
 	i = 0;
-	d = 1;
-	aux = 0;
-	while (num > 0)
-	{
-		aux += num % 2 * d;
-		d *= 10;
-		num /= 2;
-	}
-	return (aux);
-}
-
-int main(int argc, char **argv)
-{
-	t_stacks s;
-	int i;
-
-	s.a.array = malloc(sizeof(int) * argc - 1);
-	s.b.array = malloc(sizeof(int) * argc - 1);
-	s.a.size = argc - 1;
-	s.b.size = 0;
-	i = 0;
-
 	while (i < argc - 1)
 	{
-		s.a.array[i] = ft_atoi(argv[i + 1]);
-		s.b.array[i] = 0;
+		s->a.array[i] = ft_atoi(argv[i + 1]);
+		s->b.array[i] = 0;
 		i++;
 	}
-	if (checker(argc, argv, &s))
+	if (checker(argc, argv, s))
 	{
 		if (argc < 50)
-			custom_order(&s);
+			custom_order(s);
 		else if (argc < 100)
-			insert(&s);
+			insert(s);
 		else if (argc < 150)
-			radix_sort2(&s, argc - 1);
+			radix_sort2(s, argc - 1);
 		else
-			radix_sort(&s, argc - 1);
-		//print_stacks(&s);
+			radix_sort(s, argc - 1);
 	}
-	clear(&s);
+}
 
+int	main(int argc, char **argv)
+{
+	t_stacks	s;
+
+	push_swap(argc, argv, &s);
+	clear(&s);
 	return (0);
 }
