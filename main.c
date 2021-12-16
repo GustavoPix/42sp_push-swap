@@ -114,8 +114,15 @@ int main(int argc, char **argv)
 	//	i++;
 	// }
 	// print_stacks(&s);
+	if (argc < 50)
+		custom_order(&s);
+	else if (argc < 100)
+		insert(&s);
+	else if (argc < 150)
+		radix_sort2(&s, argc - 1);
+	else
+		radix_sort(&s, argc - 1);
 	// custom_order(&s);
-	radix_sort2(&s, argc - 1);
 	// bubble(&s);
 	// print_stacks(&s);
 

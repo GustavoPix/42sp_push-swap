@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:49:47 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/13 19:50:23 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 21:37:53 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void custom_order(t_stacks *s)
 	{
 		if (s->a.array[1] < s->a.array[0])
 			swap_a(s);
+		else if (s->a.size > 1 && s->a.array[s->a.size - 1] < s->a.array[0])
+			rev_rotate_a(s);
 		else if (s->a.array[0] > s->a.array[s->a.size - 1])
 			rotate_a(s);
 		else if (!inOrder(&s->a))
