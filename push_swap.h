@@ -6,15 +6,20 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 22:14:00 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 22:56:18 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
-#include <stdio.h>
-#include "./libft/libft.h"
+# include <stdio.h>
+# include "./libft/libft.h"
+
+# ifndef BUFFER_SIZE
+#  define MIN -2147483648
+#  define MAX 2147483647
+# endif
 
 typedef struct s_stack
 {
@@ -99,8 +104,16 @@ void insert(t_stacks *s);
 void bubble(t_stacks *s);
 
 /*=============*/
-/*  checker    */
+/*  valid_num  */
 /*=============*/
 int is_valid_numbers(char **strs, int size);
+int duplicate_number(t_stack *s);
+int min_valid_value(t_stack *s);
+int max_valid_value(t_stack *s);
 
-// endif
+/*=============*/
+/*  checker    */
+/*=============*/
+int checker(int argc, char **argv, t_stacks *s);
+
+#endif

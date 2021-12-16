@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:51:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/15 22:19:40 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/15 23:05:49 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,55 @@ int is_valid_numbers(char **strs, int size)
 	while (i < size)
 	{
 		if (!is_valid_number(strs[i]))
-		{
-			ft_putstr_fd("Error\n", 1);
 			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int duplicate_number(t_stack *s)
+{
+	size_t i;
+	size_t j;
+
+	i = 0;
+	while (i < s->size)
+	{
+		j = i + 1;
+		while (j < s->size)
+		{
+			if (s->array[i] == s->array[j])
+				return (1);
+			j++;
 		}
+		i++;
+	}
+	return (0);
+}
+
+int min_valid_value(t_stack *s)
+{
+	size_t i;
+
+	i = 0;
+	while (i < s->size)
+	{
+		if (MIN < s->array[i] - MIN)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int max_valid_value(t_stack *s)
+{
+	size_t i;
+
+	i = 0;
+	while (i < s->size)
+	{
+		if (MAX > MAX - s->array[i])
+			return (0);
 		i++;
 	}
 	return (1);

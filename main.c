@@ -101,14 +101,14 @@ int main(int argc, char **argv)
 	s.b.size = 0;
 	i = 0;
 
-	if (is_valid_numbers(argv, argc))
+	while (i < argc - 1)
 	{
-		while (i < argc - 1)
-		{
-			s.a.array[i] = ft_atoi(argv[i + 1]);
-			s.b.array[i] = 0;
-			i++;
-		}
+		s.a.array[i] = ft_atoi(argv[i + 1]);
+		s.b.array[i] = 0;
+		i++;
+	}
+	if (checker(argc, argv, &s))
+	{
 		if (argc < 50)
 			custom_order(&s);
 		else if (argc < 100)
@@ -117,6 +117,7 @@ int main(int argc, char **argv)
 			radix_sort2(&s, argc - 1);
 		else
 			radix_sort(&s, argc - 1);
+		//print_stacks(&s);
 	}
 	clear(&s);
 
