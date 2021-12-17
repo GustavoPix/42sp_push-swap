@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 20:57:01 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 22:05:32 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,11 @@ void	rev_rotate_r(t_stacks *s);
 /*  radix      */
 /*=============*/
 void	radix_sort(t_stacks *s, int size);
-int		radix_sort2(t_stacks *s, int size);
+
+/*=============*/
+/*  radix2     */
+/*=============*/
+void	radix_sort2(t_stacks *s, int size);
 
 /*=============*/
 /*  custom     */

@@ -25,6 +25,7 @@ SLG_UTL		= ./src/clear.c \
 			  ./src/moves/moves_b.c \
 			  ./src/moves/moves_s.c \
 			  ./src/sort/radix.c \
+			  ./src/sort/radix2.c \
 			  ./src/sort/custom.c \
 			  ./src/sort/bubble.c \
 			  ./src/sort/insert.c \
