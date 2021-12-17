@@ -1,5 +1,5 @@
 *.o
-pushswap
+push_swap
 *.a
 /test
 /push_swap_tester

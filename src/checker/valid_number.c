@@ -6,15 +6,15 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:51:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 20:57:28 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 21:01:00 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int is_valid_number(char *str)
+int	is_valid_number(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -29,9 +29,9 @@ int is_valid_number(char *str)
 	return (1);
 }
 
-int is_valid_numbers(char **strs, int size)
+int	is_valid_numbers(char **strs, int size)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (i < size)
@@ -43,10 +43,10 @@ int is_valid_numbers(char **strs, int size)
 	return (1);
 }
 
-int duplicate_number(t_stack *s)
+int	duplicate_number(t_stack *s)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	while (i < s->size)
@@ -63,9 +63,9 @@ int duplicate_number(t_stack *s)
 	return (0);
 }
 
-int overflow_int(t_stack *s, char **str)
+int	overflow_int(t_stack *s, char **str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < s->size)
