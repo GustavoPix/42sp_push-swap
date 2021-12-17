@@ -6,15 +6,15 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:49:47 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 20:42:08 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 21:08:57 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void custom_order(t_stacks *s)
+void	custom_order(t_stacks *s)
 {
-	int m;
+	int	m;
 
 	m = 0;
 	while ((!in_order(&s->a) || s->b.size))

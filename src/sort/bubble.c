@@ -6,13 +6,13 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:52:24 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 20:42:26 by glima-de         ###   ########.fr       */
+/*   Updated: 2021/12/16 21:08:40 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-void bubble(t_stacks *s)
+void	bubble(t_stacks *s)
 {
 	while (!in_order(&s->a) || s->a.size)
 	{
