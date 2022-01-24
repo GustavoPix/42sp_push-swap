@@ -50,3 +50,5 @@ Para checar se o programa ordenou corretamente, pode ser utilizado o *checker*
 Para rodar o *pyviz*, é necessário possuir o python e o `tkinter`.
 
 Para instalar o tkinter: `sudo apt-get install python3-tk`.
+
+https://github.com/o-reo/push_swap_visualizer
