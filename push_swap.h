@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 22:05:32 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/09 17:23:39 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,11 +93,6 @@ void	custom_order(t_stacks *s);
 /*  insert     */
 /*=============*/
 void	insert(t_stacks *s);
-
-/*=============*/
-/*  bubble     */
-/*=============*/
-void	bubble(t_stacks *s);
 
 /*=============*/
 /*  valid_num  */

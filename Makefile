@@ -27,7 +27,6 @@ SLG_UTL		= ./src/clear.c \
 			  ./src/sort/radix.c \
 			  ./src/sort/radix2.c \
 			  ./src/sort/custom.c \
-			  ./src/sort/bubble.c \
 			  ./src/sort/insert.c \
 			  ./src/checker/valid_number.c \
 			  ./src/checker/checker.c
