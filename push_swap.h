@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2022/02/09 17:23:39 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/10 17:49:33 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	print_stacks(t_stacks *s);
 /*  clear      */
 /*=============*/
 void	clear(t_stacks *s);
+void	clear_matrix(char **strs);
 
 /*=============*/
 /*  moves      */
