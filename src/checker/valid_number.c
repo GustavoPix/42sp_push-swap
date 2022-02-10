@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 21:51:16 by glima-de          #+#    #+#             */
-/*   Updated: 2021/12/16 21:01:00 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/09 20:34:00 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,18 @@ int	duplicate_number(t_stack *s)
 int	overflow_int(t_stack *s, char **str)
 {
 	size_t	i;
+	char	*aux;
 
 	i = 0;
 	while (i < s->size)
 	{
-		if (ft_strncmp(str[i + 1], ft_itoa(s->array[i]), ft_strlen(str[i + 1])))
+		aux = ft_itoa(s->array[i]);
+		if (ft_strncmp(str[i + 1], aux, ft_strlen(str[i + 1])))
+		{
+			free(aux);
 			return (0);
+		}
+		free(aux);
 		i++;
 	}
 	return (1);
