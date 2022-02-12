@@ -12,9 +12,9 @@
 
 #include "./push_swap.h"
 
-static void	push_swap(int argc, char **argv, t_stacks *s)
+static void push_swap(int argc, char **argv, t_stacks *s)
 {
-	int	i;
+	int i;
 
 	s->a.array = malloc(sizeof(int) * argc - 1);
 	s->b.array = malloc(sizeof(int) * argc - 1);
@@ -29,20 +29,20 @@ static void	push_swap(int argc, char **argv, t_stacks *s)
 	}
 	if (checker(argc, argv, s))
 	{
-		if (argc < 50)
+		if (argc < 10)
 			custom_order(s);
-		else if (argc < 100)
-			insert(s);
-		else if (argc < 150)
-			radix_sort2(s, argc - 1);
+		// else if (argc < 100)
+		//	insert(s);
+		// else if (argc < 150)
+		//	radix_sort2(s, argc - 1);
 		else
 			radix_sort(s, argc - 1);
 	}
 }
 
-static char	**split_string(char **strs)
+static char **split_string(char **strs)
 {
-	char	*aux;
+	char *aux;
 
 	aux = ft_strjoin(strs[0], strs[1]);
 	aux[ft_strlen(strs[0]) - 1] = ' ';
@@ -51,9 +51,9 @@ static char	**split_string(char **strs)
 	return (strs);
 }
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	t_stacks	s;
+	t_stacks s;
 
 	if (argc == 2)
 	{

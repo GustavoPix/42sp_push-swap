@@ -64,6 +64,7 @@ test:		all
 			./pushswap
 
 val:		all clean
-			valgrind -q --leak-check=full ./pushswap
+			clear
+			valgrind --leak-check=full -q ./push_swap 8 13 44 11 65 38 23 47 41 63 89 20 30 37 14 28 82 19 68 34 43 58 36 95 29 10 83 81 32 22 40 80 71 2 46 73 90 75 48 87 98 85 79 57 9 78 49 93 45 60 61 17 50 51 26 92 18 12 59 4 0 15 96 86 16 24 66 91 54 84 33 52 42 55 70 1 39 62 3 99 35 56 77 76 69 97 72 25 88 74 27 64 7 5 31 6 21 94 67 53 | wc -l
 
 .PHONY:		all gclone clean fclean re test val
