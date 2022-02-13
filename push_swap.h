@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2022/02/13 16:48:42 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:21:27 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,6 @@ typedef struct s_stacks
 /*=============*/
 int		in_order(t_stack *s);
 int		in_reverse_order(t_stack *s);
-
-/*=============*/
-/*  debug      */
-/*=============*/
-void	print_stacks(t_stacks *s);
 
 /*=============*/
 /*  clear      */
@@ -82,19 +77,9 @@ void	rev_rotate_r(t_stacks *s);
 void	radix_sort(t_stacks *s);
 
 /*=============*/
-/*  radix2     */
-/*=============*/
-void	radix_sort2(t_stacks *s, int size);
-
-/*=============*/
 /*  custom     */
 /*=============*/
 void	custom_order(t_stacks *s);
-
-/*=============*/
-/*  insert     */
-/*=============*/
-void	insert(t_stacks *s);
 
 /*=============*/
 /*  valid_num  */

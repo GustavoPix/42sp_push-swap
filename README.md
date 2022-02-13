@@ -31,7 +31,7 @@ the last one.
 
 ## Compilação
 
-`make` compila o projeto (mandatório com 2 cmds)
+`make` compila o projeto
 `make clean` apaga os arquivos compilados
 `make fclean` apaga os arquivos e o programa
 
@@ -45,7 +45,7 @@ Para checar se o programa ordenou corretamente, pode ser utilizado o *checker*
 
 *pyviz* é um visualizador do push_swap criado por *o-reo*
 
-`python3 pyviz.py \`ruby -e "puts (-200..200).to_a.shuffle.join(' ')"\``
+python3 pyviz.py \`ruby -e "puts (-200..200).to_a.shuffle.join(' ')"\`
 
 Para rodar o *pyviz*, é necessário possuir o python e o `tkinter`.
 
