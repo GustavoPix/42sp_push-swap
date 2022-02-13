@@ -29,11 +29,11 @@ static void push_swap(int argc, char **argv, t_stacks *s)
 	}
 	if (checker(argc, argv, s))
 	{
-		if (argc < 10)
+		if (argc <= 20)
 			custom_order(s);
-		// else if (argc < 100)
+		//  else if (argc < 100)
 		//	insert(s);
-		// else if (argc < 150)
+		//  else if (argc < 150)
 		//	radix_sort2(s, argc - 1);
 		else
 			radix_sort(s, argc - 1);

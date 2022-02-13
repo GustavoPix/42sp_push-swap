@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:48:35 by glima-de          #+#    #+#             */
-/*   Updated: 2022/02/12 16:56:24 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/13 14:13:40 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,12 @@ void radix_sort(t_stacks *s, int size)
 	{
 		i = 0;
 		asize = s->a.size;
-		if (has_moviment(&s->a, ib))
+		// if (has_moviment(&s->a, ib))
 		{
 			while (i < asize)
 			{
+				if (in_reverse_order(&s->b) && in_order(&s->a))
+					break;
 				if ((s->a.array[0] >> ib) & 1)
 					rotate_a(s);
 				else
@@ -103,10 +105,12 @@ void radix_sort(t_stacks *s, int size)
 			continue;
 		}
 		ib++;
-		if (has_moviment(&s->b, ib))
+		// if (has_moviment(&s->b, ib))
 		{
 			while (j < bsize)
 			{
+				if (in_reverse_order(&s->b) && in_order(&s->a))
+					break;
 				if ((s->b.array[0] >> ib) & 1)
 					push_a(s);
 				else
