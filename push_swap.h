@@ -6,7 +6,7 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 19:03:23 by glima-de          #+#    #+#             */
-/*   Updated: 2022/02/13 15:44:12 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/13 16:48:42 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,5 +107,6 @@ int		overflow_int(t_stack *s, char **str);
 /*  checker    */
 /*=============*/
 int		checker(int argc, char **argv, t_stacks *s);
+int		check_order_stacks(t_stacks *s);
 
 #endif

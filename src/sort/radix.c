@@ -6,56 +6,56 @@
 /*   By: glima-de <glima-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 19:48:35 by glima-de          #+#    #+#             */
-/*   Updated: 2022/02/13 15:46:34 by glima-de         ###   ########.fr       */
+/*   Updated: 2022/02/13 16:54:40 by glima-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
+static int	index_lower_number(t_stack *s, int lower)
+{
+	size_t	i;
+	int		r;
+	int		l_lower;
+
+	l_lower = 2147483647;
+	i = 0;
+	while (i < s->size)
+	{
+		if (s->array[i] >= lower && s->array[i] < l_lower)
+		{
+			l_lower = s->array[i];
+			r = (int)i;
+		}
+		i++;
+	}
+	return (r);
+}
+
 static void	reduce(t_stack *s)
 {
 	int		*aux;
+	int		i;
+	int		l_result;
 	size_t	ordened;
-	size_t	i;
-	int		minnor;
-	int		last_minnor;
 
 	aux = malloc(sizeof(int) * s->size);
 	ordened = 0;
+	l_result = -2147483648;
 	while (ordened < s->size)
 	{
-		i = 0;
-		minnor = 2147483647;
-		while (i < s->size)
-		{
-			if (s->array[i] < minnor)
-			{
-				if (ordened == 0 || s->array[i] > last_minnor)
-				{
-					minnor = s->array[i];
-					aux[i] = ordened;
-				}
-			}
-			i++;
-		}
-		last_minnor = minnor;
+		i = index_lower_number(s, l_result);
+		aux[i] = ordened;
+		l_result = s->array[i] + 1;
 		ordened++;
 	}
 	i = 0;
-	while (i < s->size)
+	while (i < (int)s->size)
 	{
 		s->array[i] = aux[i];
 		i++;
 	}
 	free(aux);
-}
-
-static int	check_order_stacks(t_stacks *s)
-{
-	if (in_reverse_order(&s->b) && in_order(&s->a))
-		if (s->b.array[0] < s->a.array[0])
-			return (1);
-	return (0);
 }
 
 void	radix_a(t_stacks *s, int ib)
